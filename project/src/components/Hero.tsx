@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
                 <div className="w-full h-full rounded-full bg-black"></div>
               </motion.div>
               <motion.img
-                src="/src/assets/nabeel profile.jpg"
+                src="/src/nabeel profile.jpg"
                 alt="Nabeel Siddiqui"
                 className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-orange-500 shadow-2xl transition-all duration-300"
                 initial={{ opacity: 0 }}
