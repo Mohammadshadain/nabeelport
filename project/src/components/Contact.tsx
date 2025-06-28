@@ -123,43 +123,43 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-16 sm:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               Establish Contact
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             Ready to embark on a new mission? Let's connect and create something extraordinary
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Get in Touch</h3>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6 sm:mb-8">
                 Whether you have a project in mind, want to collaborate, or just want to say hello, 
                 I'd love to hear from you. Let's create something amazing together!
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.label}
@@ -169,22 +169,22 @@ const Contact: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="flex items-center gap-4 p-4 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                    <info.icon size={20} className="text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <info.icon size={18} className="sm:w-5 sm:h-5 text-white" />
                   </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">{info.label}</p>
-                    <p className="text-white font-medium">{info.value}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-gray-400 text-xs sm:text-sm">{info.label}</p>
+                    <p className="text-white font-medium text-sm sm:text-base truncate">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
             </div>
 
-            <div className="pt-8">
-              <h4 className="text-xl font-semibold text-white mb-4">Follow My Journey</h4>
-              <div className="flex gap-4">
+            <div className="pt-6 sm:pt-8">
+              <h4 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Follow My Journey</h4>
+              <div className="flex gap-3 sm:gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -200,9 +200,9 @@ const Contact: React.FC = () => {
                       rotate: 5,
                       boxShadow: "0 10px 20px rgba(255, 69, 0, 0.3)"
                     }}
-                    className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center hover:from-orange-600 hover:to-red-600 transition-all duration-300"
+                    className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center hover:from-orange-600 hover:to-red-600 transition-all duration-300"
                   >
-                    <social.icon size={20} className="text-white" />
+                    <social.icon size={18} className="sm:w-5 sm:h-5 text-white" />
                   </motion.a>
                 ))}
               </div>
@@ -215,18 +215,18 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-8 border border-orange-500/20"
+            className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 sm:p-8 border border-orange-500/20"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <label htmlFor="name" className="block text-gray-300 font-medium mb-2">
+                <label htmlFor="name" className="block text-gray-300 font-medium mb-2 text-sm sm:text-base">
                   Name
                 </label>
                 <input
@@ -236,7 +236,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 text-white placeholder-gray-400 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 text-white placeholder-gray-400 transition-all duration-300 text-sm sm:text-base"
                   placeholder="Your name"
                 />
               </motion.div>
@@ -247,7 +247,7 @@ const Contact: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <label htmlFor="email" className="block text-gray-300 font-medium mb-2">
+                <label htmlFor="email" className="block text-gray-300 font-medium mb-2 text-sm sm:text-base">
                   Email
                 </label>
                 <input
@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 text-white placeholder-gray-400 transition-all duration-300"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 text-white placeholder-gray-400 transition-all duration-300 text-sm sm:text-base"
                   placeholder="your.email@example.com"
                 />
               </motion.div>
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <label htmlFor="message" className="block text-gray-300 font-medium mb-2">
+                <label htmlFor="message" className="block text-gray-300 font-medium mb-2 text-sm sm:text-base">
                   Message
                 </label>
                 <textarea
@@ -278,7 +278,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 text-white placeholder-gray-400 transition-all duration-300 resize-none"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20 text-white placeholder-gray-400 transition-all duration-300 resize-none text-sm sm:text-base"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </motion.div>
@@ -292,17 +292,17 @@ const Contact: React.FC = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
               >
                 {isSubmitting ? (
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                    className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white border-t-transparent rounded-full"
                   />
                 ) : (
                   <>
-                    <Send size={18} />
+                    <Send size={16} className="sm:w-4 sm:h-4" />
                     Launch Message
                   </>
                 )}
@@ -317,10 +317,10 @@ const Contact: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-20 pt-8 border-t border-gray-800 text-center"
+          className="mt-16 sm:mt-20 pt-6 sm:pt-8 border-t border-gray-800 text-center"
         >
-          <p className="text-gray-400">
-            © 2025 Nabeel Siddiqui. Made with ❤️ 
+          <p className="text-gray-400 text-sm sm:text-base px-4">
+            © 2025 Nabeel Siddiqui. Made with ❤️ in the Quantum Computing realm
           </p>
         </motion.div>
       </div>

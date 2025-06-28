@@ -9,6 +9,8 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ParallaxBackground from './components/ParallaxBackground';
 import QuantumParticles from './components/MarsParticles';
+import CelestialParallax from './components/CelestialParallax';
+import StarfallAnimation from './components/StarfallAnimation';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -48,6 +50,8 @@ function App() {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
       <ParallaxBackground />
+      <CelestialParallax />
+      <StarfallAnimation />
       <QuantumParticles />
       
       <motion.div
