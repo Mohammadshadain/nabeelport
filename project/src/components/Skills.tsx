@@ -118,7 +118,7 @@ const Skills: React.FC = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
-              { number: "7.9", label: "CGPA" },
+              { number: "8.0", label: "CGPA" },
               { number: "2+", label: "Years Learning" },
               { number: "10+", label: "Technologies" },
               { number: "3+", label: "Major Projects" }
